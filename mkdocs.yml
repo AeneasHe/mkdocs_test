@@ -5,4 +5,5 @@ theme:
 nav:
     - Home: index.md
     - About: about.md
+    - Howto: howto.md
 
