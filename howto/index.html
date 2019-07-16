@@ -36,7 +36,7 @@
     
     
       
-        <title>About - TaraxaMkdocs</title>
+        <title>Howto - TaraxaMkdocs</title>
       
     
     
@@ -75,7 +75,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#about-taraxa" tabindex="1" class="md-skip">
+      <a href="#how-to-deploy-mkdocs-to-github" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -101,7 +101,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                About
+                Howto
               
             </span>
           
@@ -180,6 +180,18 @@
       
       
 
+
+  <li class="md-nav__item">
+    <a href="../about/" title="About" class="md-nav__link">
+      About
+    </a>
+  </li>
+
+    
+      
+      
+      
+
   
 
 
@@ -190,65 +202,10 @@
       
     
     
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        About
-      </label>
-    
-    <a href="./" title="About" class="md-nav__link md-nav__link--active">
-      About
-    </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#team" title="Team" class="md-nav__link">
-    Team
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#advisors" title="Advisors" class="md-nav__link">
-    Advisors
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#partners" title="Partners" class="md-nav__link">
-    Partners
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../howto/" title="Howto" class="md-nav__link">
+    <a href="./" title="Howto" class="md-nav__link md-nav__link--active">
       Howto
     </a>
+    
   </li>
 
     
@@ -269,36 +226,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#team" title="Team" class="md-nav__link">
-    Team
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#advisors" title="Advisors" class="md-nav__link">
-    Advisors
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#partners" title="Partners" class="md-nav__link">
-    Partners
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -310,10 +237,109 @@
               
                 
                 
-                <h1 id="about-taraxa">About Taraxa</h1>
-<h2 id="team">Team</h2>
-<h2 id="advisors">Advisors</h2>
-<h2 id="partners">Partners</h2>
+                <h1 id="how-to-deploy-mkdocs-to-github">How to deploy mkdocs to github</h1>
+<ol>
+<li>create repository(such as mkdocs_test) on github  </li>
+</ol>
+<p>https://github.com/cofepy/mkdocs_test  </p>
+<ol>
+<li>
+<p>clone the repository to local folder
+<pre><code>
+git clone https://github.com/cofepy/mkdocs_test
+cd mkdocs_test
+</pre></code></p>
+</li>
+<li>
+<p>in the local folder<br />
+create a mkdocs project named "TaraxamMkdocs"  </p>
+</li>
+</ol>
+<pre><code>
+pip install mkdocs
+pip install mkdocs-material
+mkdocs new TaraxaMkdocs
+</pre>
+
+<p></code></p>
+<ol>
+<li>add some .md files in subfolder "docs"
+<pre><code>
+mkdocs_test<ul>
+<li>docs
+    about.md
+    index.md</li>
+<li>site
+mkdocs.yml
+README.md
+</pre></code>
+if you want add a navbar, edit "mkdocs.yml"
+add below
+<pre><code>
+nav:</li>
+<li>Home: index.md</li>
+<li>About: about.md
+</pre></code></li>
+</ul>
+</li>
+</ol>
+<p>if you want add a theme, edit "mkdocs.yml"<br />
+add below<br />
+<pre><code>
+theme: 
+    name: 'material'
+</pre></code></p>
+<p>(please"pip install mkdocs-material" first)  </p>
+<ol>
+<li>
+<p>push the project to github
+<pre><code>
+git add .
+git commit -m "init"
+git push
+</pre></code></p>
+</li>
+<li>
+<p>deploy the project
+<pre><code>
+mkdocs gh-deploy --clean
+</pre></code>
+you can see below info</p>
+</li>
+</ol>
+<pre><code>
+INFO    -  Cleaning site directory 
+INFO    -  Building documentation to directory: /Users/bitcocohe/Github/python_app/mkdocs_test/site 
+INFO    -  Copying '/Users/bitcocohe/Github/python_app/mkdocs_test/site' to 'gh-pages' branch and pushing to GitHub. 
+INFO    -  Your documentation should shortly be available at: https://cofepy.github.io/mkdocs_test/ 
+</pre>
+
+<p></code></p>
+<ol>
+<li>see the pages on github  </li>
+</ol>
+<p>https://cofepy.github.io/mkdocs_test/  </p>
+<h1 id="reference">reference</h1>
+<ol>
+<li>
+<p>install<br />
+https://mkdocs.readthedocs.io/en/0.15.3/<br />
+https://www.mkdocs.org/  </p>
+</li>
+<li>
+<p>config<br />
+https://romandc.com/techtalk-mkdocs/
+https://www.mkdocs.org/user-guide/configuration/</p>
+</li>
+<li>
+<p>theme<br />
+https://squidfunk.github.io/mkdocs-material/  </p>
+</li>
+<li>
+<p>deploy<br />
+https://www.mkdocs.org/#deploying</p>
+</li>
+</ol>
                 
                   
                 
@@ -334,7 +360,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href=".." title="Home" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../about/" title="About" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -343,25 +369,11 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Home
+                About
               </span>
             </div>
           </a>
         
-        
-          <a href="../howto/" title="Howto" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
-              <span class="md-flex__ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                Howto
-              </span>
-            </div>
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
-            </div>
-          </a>
         
       </nav>
     </div>
