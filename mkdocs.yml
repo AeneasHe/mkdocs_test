@@ -1,0 +1,6 @@
+site_name: TaraxaMkdocs
+site_dir: github/
+nav:
+    - Home: index.md
+    - About: about.md
+
