@@ -1,6 +1,6 @@
 # How to deploy mkdocs to github  
 
-1. create repository on github  
+1. create repository(such as mkdocs_test) on github  
 
 https://github.com/cofepy/mkdocs_test  
 
@@ -10,13 +10,31 @@ git clone https://github.com/cofepy/mkdocs_test
 cd mkdocs_test
 </pre></code>
 
-3. in the local folder
+3. in the local folder  
+create a mkdocs project named "TaraxamMkdocs"  
+
 <pre><code>
 pip install mkdocs
 mkdocs new TaraxaMkdocs
 </pre></code>
 
-4. add some .md files in subfolder docs
+4. add some .md files in subfolder "docs"
+<pre><code>
+mkdocs_test
+    - docs
+        about.md
+        index.md
+    - site
+    mkdocs.yml
+    README.md
+</pre></code>
+if you wand add a navbar, edit "mkdocs.yml"
+add below
+<pre><code>
+nav:
+    - Home: index.md
+    - About: about.md
+</pre></code>
 
 5. push the project to github
 <pre><code>
