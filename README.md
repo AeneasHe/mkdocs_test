@@ -1,5 +1,6 @@
 # How to deploy mkdocs to github  
 
+
 1. create repository(such as mkdocs_test) on github  
 
 https://github.com/cofepy/mkdocs_test  
@@ -55,3 +56,17 @@ INFO    -  Building documentation to directory: /Users/bitcocohe/Github/python_a
 INFO    -  Copying '/Users/bitcocohe/Github/python_app/mkdocs_test/site' to 'gh-pages' branch and pushing to GitHub. 
 INFO    -  Your documentation should shortly be available at: https://cofepy.github.io/mkdocs_test/ 
 </pre></code>
+
+
+# reference
+
+1. install  
+https://mkdocs.readthedocs.io/en/0.15.3/  
+https://www.mkdocs.org/  
+
+2. config  
+https://romandc.com/techtalk-mkdocs/
+https://www.mkdocs.org/user-guide/configuration/
+
+3. deploy  
+https://www.mkdocs.org/#deploying
