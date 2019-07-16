@@ -5,5 +5,5 @@ theme:
 nav:
     - Home: index.md
     - About: about.md
-    - Deploy: howto.md
+    - Deploy to github: deploy.md
 
