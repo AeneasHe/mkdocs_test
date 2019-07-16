@@ -1,5 +1,7 @@
 site_name: TaraxaMkdocs
 site_dir: site/
+theme: 
+    name: 'material'
 nav:
     - Home: index.md
     - About: about.md
