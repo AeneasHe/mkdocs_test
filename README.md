@@ -57,6 +57,9 @@ INFO    -  Copying '/Users/bitcocohe/Github/python_app/mkdocs_test/site' to 'gh-
 INFO    -  Your documentation should shortly be available at: https://cofepy.github.io/mkdocs_test/ 
 </pre></code>
 
+7. see the pages on github  
+
+https://cofepy.github.io/mkdocs_test/  
 
 # reference
 
