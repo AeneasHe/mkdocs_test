@@ -36,7 +36,7 @@
     
     
       
-        <title>Deploy - TaraxaMkdocs</title>
+        <title>Deploy to github - TaraxaMkdocs</title>
       
     
     
@@ -101,7 +101,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                Deploy
+                Deploy to github
               
             </span>
           
@@ -202,9 +202,45 @@
       
     
     
-    <a href="./" title="Deploy" class="md-nav__link md-nav__link--active">
-      Deploy
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Deploy to github
+      </label>
+    
+    <a href="./" title="Deploy to github" class="md-nav__link md-nav__link--active">
+      Deploy to github
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#doing-step-by-step" title="Doing step by step" class="md-nav__link">
+    Doing step by step
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference-links" title="reference links" class="md-nav__link">
+    reference links
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -226,6 +262,29 @@
     
   
   
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#doing-step-by-step" title="Doing step by step" class="md-nav__link">
+    Doing step by step
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference-links" title="reference links" class="md-nav__link">
+    reference links
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -238,11 +297,12 @@
                 
                 
                 <h1 id="how-to-deploy-mkdocs-to-github">How to deploy mkdocs to github</h1>
+<h2 id="doing-step-by-step">Doing step by step</h2>
 <ol>
-<li>create repository(such as mkdocs_test) on github  </li>
-</ol>
-<p>https://github.com/cofepy/mkdocs_test  </p>
-<ol>
+<li>
+<p>create repository(such as mkdocs_test) on github<br />
+<a href="https://github.com/cofepy/mkdocs_test">https://github.com/cofepy/mkdocs_test</a>  </p>
+</li>
 <li>
 <p>clone the repository to local folder
 <pre><code>
@@ -251,8 +311,7 @@ cd mkdocs_test
 </pre></code></p>
 </li>
 <li>
-<p>in the local folder<br />
-create a mkdocs project named "TaraxamMkdocs"  </p>
+<p>in the local folder, create a mkdocs project named "TaraxamMkdocs"  </p>
 </li>
 </ol>
 <pre><code>
@@ -261,52 +320,42 @@ pip install mkdocs-material
 mkdocs new TaraxaMkdocs
 </pre>
 
-<p></code></p>
-<ol>
-<li>add some .md files in subfolder "docs"
+<p></code>
+4. add some .md files in subfolder "docs"
 <pre><code>
-mkdocs_test<ul>
-<li>docs
-    about.md
-    index.md</li>
-<li>site
-mkdocs.yml
-README.md
+mkdocs_test
+    - docs
+        about.md
+        index.md
+    - site
+    mkdocs.yml
+    README.md
 </pre></code>
 if you want add a navbar, edit "mkdocs.yml"
 add below
 <pre><code>
-nav:</li>
-<li>Home: index.md</li>
-<li>About: about.md
-</pre></code></li>
-</ul>
-</li>
-</ol>
+nav:
+    - Home: index.md
+    - About: about.md
+</pre></code></p>
 <p>if you want add a theme, edit "mkdocs.yml"<br />
 add below<br />
 <pre><code>
 theme: 
     name: 'material'
 </pre></code></p>
-<p>(please"pip install mkdocs-material" first)  </p>
-<ol>
-<li>
-<p>push the project to github
+<p>(please"pip install mkdocs-material" first)<br />
+5. push the project to github
 <pre><code>
 git add .
 git commit -m "init"
 git push
-</pre></code></p>
-</li>
-<li>
-<p>deploy the project
+</pre></code>
+6. deploy the project
 <pre><code>
 mkdocs gh-deploy --clean
 </pre></code>
 you can see below info</p>
-</li>
-</ol>
 <pre><code>
 INFO    -  Cleaning site directory 
 INFO    -  Building documentation to directory: /Users/bitcocohe/Github/python_app/mkdocs_test/site 
@@ -314,30 +363,28 @@ INFO    -  Copying '/Users/bitcocohe/Github/python_app/mkdocs_test/site' to 'gh-
 INFO    -  Your documentation should shortly be available at: https://cofepy.github.io/mkdocs_test/ 
 </pre>
 
-<p></code></p>
-<ol>
-<li>see the pages on github  </li>
-</ol>
-<p>https://cofepy.github.io/mkdocs_test/  </p>
-<h1 id="reference">reference</h1>
+<p></code>
+7. see the pages on github  </p>
+<p><a href="https://cofepy.github.io/mkdocs_test/">https://cofepy.github.io/mkdocs_test/</a>  </p>
+<h2 id="reference-links">reference links</h2>
 <ol>
 <li>
 <p>install<br />
-https://mkdocs.readthedocs.io/en/0.15.3/<br />
-https://www.mkdocs.org/  </p>
+<a href="https://mkdocs.readthedocs.io/en/0.15.3/">https://mkdocs.readthedocs.io/en/0.15.3/</a><br />
+<a href="https://www.mkdocs.org/">https://www.mkdocs.org/</a>  </p>
 </li>
 <li>
 <p>config<br />
-https://romandc.com/techtalk-mkdocs/
-https://www.mkdocs.org/user-guide/configuration/</p>
+<a href="https://romandc.com/techtalk-mkdocs/">https://romandc.com/techtalk-mkdocs/</a>
+<a href="https://www.mkdocs.org/user-guide/configuration/">https://www.mkdocs.org/user-guide/configuration/</a></p>
 </li>
 <li>
 <p>theme<br />
-https://squidfunk.github.io/mkdocs-material/  </p>
+<a href="https://squidfunk.github.io/mkdocs-material/">https://squidfunk.github.io/mkdocs-material/</a>  </p>
 </li>
 <li>
 <p>deploy<br />
-https://www.mkdocs.org/#deploying</p>
+<a href="https://www.mkdocs.org/#deploying">https://www.mkdocs.org/#deploying</a></p>
 </li>
 </ol>
                 
