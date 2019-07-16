@@ -16,6 +16,7 @@ create a mkdocs project named "TaraxamMkdocs"
 
 <pre><code>
 pip install mkdocs
+pip install mkdocs-material
 mkdocs new TaraxaMkdocs
 </pre></code>
 
@@ -29,13 +30,22 @@ mkdocs_test
     mkdocs.yml
     README.md
 </pre></code>
-if you wand add a navbar, edit "mkdocs.yml"
+if you want add a navbar, edit "mkdocs.yml"
 add below
 <pre><code>
 nav:
     - Home: index.md
     - About: about.md
 </pre></code>
+
+if you want add a theme, edit "mkdocs.yml"  
+add below  
+<pre><code>
+theme: 
+    name: 'material'
+</pre></code>
+
+(please"pip install mkdocs-material" first)  
 
 5. push the project to github
 <pre><code>
@@ -71,5 +81,8 @@ https://www.mkdocs.org/
 https://romandc.com/techtalk-mkdocs/
 https://www.mkdocs.org/user-guide/configuration/
 
-3. deploy  
+3. theme  
+https://squidfunk.github.io/mkdocs-material/  
+
+4. deploy  
 https://www.mkdocs.org/#deploying
